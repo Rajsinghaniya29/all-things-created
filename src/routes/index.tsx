@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Sparkles, Brain, Target, Calendar, MessageSquare, TrendingUp, Zap } from "lucide-react";
+import { Sparkles, Target, Calendar, MessageSquare, TrendingUp, Zap, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
