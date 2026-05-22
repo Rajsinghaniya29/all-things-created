@@ -35,12 +35,8 @@ function AuthLayout() {
   return (
     <div className="flex min-h-screen">
       <aside className="hidden w-64 shrink-0 flex-col gap-1 border-r border-border/60 bg-sidebar/60 p-4 backdrop-blur md:flex">
-        <Link to="/dashboard" className="mb-6 flex items-center gap-2 px-2 py-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--mint)] to-[var(--mint-glow)] shadow-glow">
-            <Brain className="h-5 w-5 text-primary-foreground" />
-          </div>
-          <span className="font-display font-bold">Thought→Action</span>
-        </Link>
+        <div className="mb-6 px-2 py-2" />
+
         <nav className="flex-1 space-y-1">
           {NAV.map((n) => {
             const active = location.pathname.startsWith(n.to);
