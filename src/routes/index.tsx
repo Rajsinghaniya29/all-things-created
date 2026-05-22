@@ -10,13 +10,7 @@ export const Route = createFileRoute("/")({
 function Landing() {
   return (
     <div className="min-h-screen">
-      <nav className="container mx-auto flex items-center justify-between px-6 py-6">
-        <div className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--mint)] to-[var(--mint-glow)] shadow-glow">
-            <Brain className="h-5 w-5 text-primary-foreground" />
-          </div>
-          <span className="font-display text-lg font-bold tracking-tight">Thought<span className="text-gradient-mint">→</span>Action</span>
-        </div>
+      <nav className="container mx-auto flex items-center justify-end px-6 py-6">
         <div className="flex gap-2">
           <Link to="/login"><Button variant="ghost" size="sm">Sign in</Button></Link>
           <Link to="/login"><Button variant="hero" size="sm">Get started</Button></Link>
