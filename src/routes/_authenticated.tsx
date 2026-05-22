@@ -1,6 +1,6 @@
 import { createFileRoute, Link, Outlet, useNavigate, useLocation } from "@tanstack/react-router";
 import { useEffect } from "react";
-import { Brain, LayoutDashboard, Sparkles, MessageSquare, LogOut } from "lucide-react";
+import { LayoutDashboard, Sparkles, MessageSquare, LogOut } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
