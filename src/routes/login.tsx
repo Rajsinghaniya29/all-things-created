@@ -67,12 +67,6 @@ function LoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center px-4">
       <div className="glass-strong w-full max-w-md rounded-3xl p-8 shadow-card">
-        <Link to="/" className="mb-6 flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--mint)] to-[var(--mint-glow)]">
-            <Brain className="h-5 w-5 text-primary-foreground" />
-          </div>
-          <span className="font-display font-bold">Thought→Action</span>
-        </Link>
         <h1 className="font-display text-2xl font-bold">
           {mode === "signin" ? "Welcome back" : "Create your account"}
         </h1>
