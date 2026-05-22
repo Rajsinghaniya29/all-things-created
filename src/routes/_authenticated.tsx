@@ -70,11 +70,7 @@ function AuthLayout() {
       </aside>
 
       {/* Mobile top bar */}
-      <div className="md:hidden fixed top-0 inset-x-0 z-20 flex items-center justify-between border-b border-border/60 bg-sidebar/80 px-4 py-3 backdrop-blur">
-        <Link to="/dashboard" className="flex items-center gap-2">
-          <Brain className="h-5 w-5 text-[var(--mint)]" />
-          <span className="font-display font-semibold text-sm">Thought→Action</span>
-        </Link>
+      <div className="md:hidden fixed top-0 inset-x-0 z-20 flex items-center justify-end border-b border-border/60 bg-sidebar/80 px-4 py-3 backdrop-blur">
         <div className="flex gap-1">
           {NAV.map((n) => (
             <Link key={n.to} to={n.to} className="rounded-md p-2 text-muted-foreground hover:text-foreground">
