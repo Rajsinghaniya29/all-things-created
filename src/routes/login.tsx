@@ -63,23 +63,6 @@ function LoginPage() {
         </p>
 
 
-  return (
-    <div className="flex min-h-screen items-center justify-center px-4">
-      <div className="glass-strong w-full max-w-md rounded-3xl p-8 shadow-card">
-        <h1 className="font-display text-2xl font-bold">
-          {mode === "signin" ? "Welcome back" : "Create your account"}
-        </h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          {mode === "signin" ? "Sign in to keep building." : "Start turning thoughts into action."}
-        </p>
-
-        <Button variant="outline" className="mt-6 w-full" onClick={handleGoogle} disabled={busy}>
-          Continue with Google
-        </Button>
-
-        <div className="my-6 flex items-center gap-3 text-xs text-muted-foreground">
-          <div className="h-px flex-1 bg-border" /> or <div className="h-px flex-1 bg-border" />
-        </div>
 
         <form onSubmit={handleEmail} className="space-y-3">
           {mode === "signup" && (
