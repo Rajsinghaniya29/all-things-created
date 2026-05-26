@@ -52,16 +52,16 @@ function LoginPage() {
     }
   }
 
-  async function handleGoogle() {
-    setBusy(true);
-    const result = await lovable.auth.signInWithOAuth("google", {
-      redirect_uri: window.location.origin,
-    });
-    if (result.error) {
-      toast.error(result.error.message);
-      setBusy(false);
-    }
-  }
+  return (
+    <div className="flex min-h-screen items-center justify-center px-4">
+      <div className="glass-strong w-full max-w-md rounded-3xl p-8 shadow-card">
+        <h1 className="font-display text-2xl font-bold">
+          {mode === "signin" ? "Welcome back" : "Create your account"}
+        </h1>
+        <p className="mt-1 text-sm text-muted-foreground">
+          {mode === "signin" ? "Sign in to keep building." : "Start turning thoughts into action."}
+        </p>
+
 
   return (
     <div className="flex min-h-screen items-center justify-center px-4">
