@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
-import { lovable } from "@/integrations/lovable/index";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -53,17 +52,6 @@ function LoginPage() {
     }
   }
 
-  async function handleGoogle() {
-    setBusy(true);
-    const result = await lovable.auth.signInWithOAuth("google", {
-      redirect_uri: window.location.origin,
-    });
-    if (result.error) {
-      toast.error(result.error.message);
-      setBusy(false);
-    }
-  }
-
   return (
     <div className="flex min-h-screen items-center justify-center px-4">
       <div className="glass-strong w-full max-w-md rounded-3xl p-8 shadow-card">
@@ -74,13 +62,7 @@ function LoginPage() {
           {mode === "signin" ? "Sign in to keep building." : "Start turning thoughts into action."}
         </p>
 
-        <Button variant="outline" className="mt-6 w-full" onClick={handleGoogle} disabled={busy}>
-          Continue with Google
-        </Button>
 
-        <div className="my-6 flex items-center gap-3 text-xs text-muted-foreground">
-          <div className="h-px flex-1 bg-border" /> or <div className="h-px flex-1 bg-border" />
-        </div>
 
         <form onSubmit={handleEmail} className="space-y-3">
           {mode === "signup" && (
